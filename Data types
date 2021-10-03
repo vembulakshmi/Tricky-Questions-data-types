@@ -1,0 +1,273 @@
+1).take 10 integer input from user and share them in an array and print them on screen..
+
+import java.util.*;
+class  Data1types
+{
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of element we want");
+		n=sc.nextInt();
+
+		if(n!=0 && n>0)
+		{
+		int[] array=new int[10];
+		System.out.println("enter all elements one by one");
+		//int n;
+		for(int i=0;i<n;i++)
+		{
+			array[i]=sc.nextInt();
+		}
+
+		System.out.println("array elements are");
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(array[i]+" ");
+			
+		}
+		System.out.println("\n");
+		}
+		else{
+			System.out.println("please enter valid array number");
+		}
+
+		
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------
+2).take 10 integer inputs from user and store them in an array.again ask user to enter a number and now,tell user to check whether that number is present in array or not?
+
+
+import java.util.*;
+class Data2types
+{
+public static void main(String[] args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter total number of elements we want");
+	int num=sc.nextInt();
+
+	if(num !=0 &&num>0)
+	{
+
+	int[] array=new int[100];
+	System.out.println("enter all elements one by one");
+	for(int i=0;i<num;i++)
+	{
+	array[i]=sc.nextInt();
+
+	}
+
+	System.out.println("elements of all array is: ");
+	for(int i=0;i<num;i++)
+	{
+	System.out.print(array[i]+" ");
+	}
+	System.out.println("\n");
+
+	System.out.println("please enter a number you want to check: ");
+	int check=sc.nextInt();
+	
+	boolean test=false;
+	for(int i:array){
+	if(i==check){
+	test=true;
+	break;
+	}
+	}
+	if(test==true){
+	System.out.println("number is present");}
+	else{
+	System.out.println("number is not  present");}
+	}
+	else{
+		System.out.println("please enter valid number");}
+
+
+	}
+	}
+  --------------------------------------------------------------------------------------------------------------------------------------
+  
+  3)./*take 20 integer inputs from user and put them in array and print the following
+	-number of +ve numbers
+	-number of -ve numbers
+	-number of odd numbers
+	-number of even numbers
+	-number of 0's*/
+
+import java.util.*;
+
+class Data3types 
+{
+	public static void main(String[] args) 
+	{
+		int sumPositive,sumEven,sumNegative,sumOdd,sumzero,sumeven,sumodd;
+		sumPositive=0;
+		sumEven=0;
+		sumNegative=0;
+		sumOdd=0;
+		sumzero=0;
+		sumeven=0;
+		sumodd=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter total number of elements we want");
+		int num=sc.nextInt();
+
+		if(num !=0 && num>0)
+		{
+		int[] array=new int[100];
+		System.out.println("enter all elements one by one");
+		for(int i=0;i<num;i++)
+		{
+			array[i]=sc.nextInt();
+		}
+
+		System.out.println("elements of all array is: ");
+		for(int i=0;i<num;i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+		System.out.println("\n");
+
+		//number positive negative  even and odd zeros check
+
+		for(int i=0;i<num;i++)
+		{
+			if(array[i]<0){
+				sumNegative++;
+			}
+			else if(array[i]==0){
+				sumzero++;
+			}
+			else if(array[i]>0) {
+				sumPositive++;	
+			}
+		}
+			for(int i=0;i<num;i++){
+			 if((array[i]%2)==0){
+				sumeven++;
+			}
+			else if((array[i]%2)==1){
+				sumodd++;
+			}
+			}
+
+		
+		System.out.println("Total number of Positive integer is: "+sumPositive);
+		System.out.println("Total number of Negative integer is: "+sumNegative);
+		System.out.println("Total number of Zero integer is: "+sumzero);
+		System.out.println("Total number of Even integer is: "+sumeven);
+		System.out.println("Total number of Odd integer is: "+sumodd);
+		}
+		else
+		{
+			System.out.println("please enter valid number");
+		}
+	}
+  }
+  -------------------------------------------------------------------------------------------------------------------------
+  4}.//take 10 integer input from user and store them in an array.now,copy all the elements in an an another array but in reverse order
+
+import java.util.*;
+class data4types 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter total number of elements we want");
+		int num=sc.nextInt();
+
+		if(num !=0 && num>0)
+		{
+
+		int[] array=new int[10];
+		System.out.println("enter all elements one by one");
+		for(int i=0;i<num;i++)
+		{
+			array[i]=sc.nextInt();
+		}
+
+		System.out.println("original array is ");
+		for(int i=0;i<num;i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+		System.out.println("\n");
+		
+
+		System.out.println("reversed array is ");
+		//int num;
+		int i;
+		 for( i=num-1;i>=0;i--){
+			System.out.print(array[i]+" ");
+		}
+		}
+		else{
+			System.out.println("please enter valid number");
+		}
+			
+
+	}
+}
+--------------------------------------------------------------------------------------------------------------------------------
+5).//write a program check if element of an array  are same or not it read from front or back.
+
+import java.util.*;
+class  Data1types
+{
+	public static void main(String[] args) 
+	{
+		int n;
+		boolean bl = false;
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of element we want");
+		n=sc.nextInt();
+
+		if(n!=0 && n>0)
+		{
+		int[] array=new int[10];
+		System.out.println("enter all elements one by one");
+		//int n;
+		for(int i=0;i<n;i++)
+		{
+			array[i]=sc.nextInt();
+		}
+
+		System.out.println(" all array elements are");
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(array[i]+" ");
+			
+		}
+		System.out.println("\n");
+		for(int i=0; i<array.length/2; i++)
+			{
+				if(array[i] != array[array.length-i-1])
+				{
+					bl = false;
+				}
+				else
+					bl=true;
+			}
+		
+			if(bl)
+			{
+				System.out.println(" all Array Elements are same from front and Back");
+			}
+			else
+			{
+				System.out.println("The all Array Elements are not same from front and Back");
+			}
+		
+		}
+
+		else{
+			System.out.println("please enter valid array number");
+		}
+
+		
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------------
